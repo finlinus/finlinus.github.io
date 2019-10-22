@@ -221,10 +221,11 @@ It minimize cost function in following manner:
 
    - $cost_{1}(\Theta^{T}X^{(i)})$: part of $A$ when $y^(i)=1$, approximately to 0 if $\Theta^{T}X^{(i)} \geq 1$
    - $cost_{0}(\Theta^{T}X^{(i)})$: part of $A$ when $y^(i)=0$, approximately to 0 if $\Theta^{T}X^{(i)} \leq -1$
+  
    $\Theta^{T}X^{(i)}$ equals to dot product of the two vectors and can be write as $p^{i}\cdot \|\Theta \|$, where
 
-     - $p^{i}$: projection of $X^{(i)}$ to $\Theta$
-     - $\| \Theta \|$: vector length of $\Theta$. $B=\frac {1}{2} \cdot \| \Theta \|^{2}$
+   - $p^{i}$: projection of $X^{(i)}$ to $\Theta$
+   - $\| \Theta \|$: vector length of $\Theta$. $B=\frac {1}{2} \cdot \| \Theta \|^{2}$
   
   So, the minimization of $J(\Theta)$ becomes minimization of $B$, which can be achieved via maximization of $\sum_{i=1}^{n}|p^{i}|$.
 2. With a Gaussian kernel
