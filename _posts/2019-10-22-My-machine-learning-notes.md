@@ -223,7 +223,7 @@ It minimize cost function in following manner:
    - $p^{i}$: projection of $X^{(i)}$ to $\Theta$
    - $\| \Theta \|$: vector length of $\Theta$. $B=\frac {1}{2} \cdot \| \Theta \|^{2}$
 
-  So, the minimization of $J(\Theta)$ becomes minimization of $B$, which can be achieved via maximization of $\sum_{i=1}^{n}|p^{i}|$.
+   So, the minimization of $J(\Theta)$ becomes minimization of $B$, which can be achieved via maximization of $\sum_{i=1}^{n}|p^{i}|$.
 2. With a Gaussian kernel
 
   When the decision boundary is non-linear, we need to adopt a non-linear kernel like Gaussian kernel to measure similarity.
