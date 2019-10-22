@@ -127,6 +127,7 @@ where regularization parameter $\lambda$ controls a trade off between variance a
 - The interception term $\theta_{0}$ is not to be penalized.
 
 Then for gradient descent algorithm, update $\theta_{j}$ simultaneously with following until converge
+
 $$\theta_{0}=\theta_{0}-\alpha \cdot \frac{1}{n}\sum_{i=1}^{n}\left(h_{\Theta}(X^{(i)})-y^{(i)}\right)$$
 $$\theta_{j}=(1-\frac{\alpha\lambda}{n})\cdot\theta_{j}-\alpha \cdot \frac{1}{n}\sum_{i=1}^{n}\left(h_{\Theta}(X^{(i)})-y^{(i)}\right)X^{(i,j)}, j=1,2,3...m$$
 
@@ -218,9 +219,9 @@ It minimize cost function in following manner:
    It's a form of $J(\Theta)=CA+B$, where
    - $cost_{1}(\Theta^{T}X^{(i)})$: part of $A$ when $y^(i)=1$, approximately to 0 if $\Theta^{T}X^{(i)} \geq 1$
    - $cost_{0}(\Theta^{T}X^{(i)})$: part of $A$ when $y^(i)=0$, approximately to 0 if $\Theta^{T}X^{(i)} \leq -1$
-   $\Theta^{T}X^{(i)}$ equals to dot product of the two vectors and can be write as $p^{i}\cdot||\Theta||$, where
+   $\Theta^{T}X^{(i)}$ equals to dot product of the two vectors and can be write as $p^{i}\cdot \|\Theta \|$, where
    - $p^{i}$: projection of $X^{(i)}$ to $\Theta$
-   - $||\Theta||$: vector length of $\Theta$. $B=\frac {1}{2} \cdot ||\Theta||^{2}$
+   - $\|\Theta\|$: vector length of $\Theta$. $B=\frac {1}{2} \cdot \| \Theta \|^{2}$
   
   So, the minimization of $J(\Theta)$ becomes minimization of $B$, which can be achieved via maximization of $\sum_{i=1}^{n}|p^{i}|$.
 2. With a Gaussian kernel
@@ -257,7 +258,7 @@ Steps:
 4. Repeat step 2 and step 3 until converge (the centroid locations merely change over loop).
 
 The cost function is
-$$J=\frac{1}{n}\cdot\sum_{i=1}^{n}||x^{(i)}-\mu_{c^{i}}||^{2}$$
+$$J=\frac{1}{n}\cdot\sum_{i=1}^{n} \| x^{(i)}-\mu_{c^{i}} \|^{2}$$
 where
 
 - $n$: number of observations
@@ -303,7 +304,7 @@ Suppose that dataset is organized as matrix $X$ in n_observations x m_features, 
 - choose k
   - total ratios of first k latents is reasonably large, e.g. 80% or more
   - test k until it fufills
-  $$\frac{||X-X_{p}L^{T}||^{2}}{||X||^{2}} \leq 0.01$$
+  $$\frac{\|X-X_{p}L^{T}\|^{2}}{\|X\|^{2}} \leq 0.01$$
 - bad application of PCA: prevent overfitting
 - replace $X$ with its transpose after scaling and apply PCA if feature number m is much larger than observation number n. decomposition of matrix has complexity of $O(n^{3})$
 - when used with other learning algorithms, scaling and decomposition should performed only on training data, then cross validation and test data use the scaling values and loadings to generate reduced features.
