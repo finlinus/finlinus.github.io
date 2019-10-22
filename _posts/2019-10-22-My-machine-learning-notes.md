@@ -222,7 +222,6 @@ It minimize cost function in following manner:
    $\Theta^{T}X^{(i)}$ equals to dot product of the two vectors and can be write as $p^{i}\cdot \|\Theta \|$, where
    - $p^{i}$: projection of $X^{(i)}$ to $\Theta$
    - $\| \Theta \|$: vector length of $\Theta$. $B=\frac {1}{2} \cdot \| \Theta \|^{2}$
-
    So, the minimization of $J(\Theta)$ becomes minimization of $B$, which can be achieved via maximization of $\sum_{i=1}^{n}|p^{i}|$.
 2. With a Gaussian kernel
 
