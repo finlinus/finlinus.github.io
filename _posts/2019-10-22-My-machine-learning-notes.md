@@ -142,7 +142,8 @@ $$J(\Theta)=-\frac{1}{n}\left[\sum_{i=1}^{n}y^{(i)}log(h_{\Theta}(X^{(i)}))+(1-y
 
 ### 4.1 Concepts and Schemes
 
-![Neural Network](neural_networks1.png "Scheme")
+![Neural Network](../img/neural_networks1.png "Scheme")
+
 where
 
 - $x_{i}$: $i$th input
@@ -155,6 +156,7 @@ where
 ### 4.2 Cost Function
 
 $$J(\Theta)=-\frac{1}{n}\left[\sum_{i=1}^{n}\sum_{k=1}^{K}y^{(i)}_{k}log(h_{\Theta}(X^{(i)})_{k})+(1-y^{(i)}_{k})log(1-h_{\Theta}(X^{(i)})_{k})\right]+\frac {\lambda}{2n}\cdot\sum_{l=1}^{L-1}\sum_{i=1}^{s_{l}}\sum_{j=1}^{s_{l+1}}\left(\Theta_{ji}^{(l)}\right)^{2}$$
+
 where
 
 - $\Theta_{ij}^{(l)}$: Parameter used to transform $j$th input from $l$th layer to $i$th output of $l+1$th layer
