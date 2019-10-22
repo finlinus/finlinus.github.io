@@ -219,20 +219,18 @@ It minimize cost function in following manner:
    It's a form of $J(\Theta)=CA+B$, where
    - $cost_{1}(\Theta^{T}X^{(i)})$: part of $A$ when $y^(i)=1$, approximately to 0 if $\Theta^{T}X^{(i)} \geq 1$
    - $cost_{0}(\Theta^{T}X^{(i)})$: part of $A$ when $y^(i)=0$, approximately to 0 if $\Theta^{T}X^{(i)} \leq -1$
-   $\Theta^{T}X^{(i)}$ equals to dot product of the two vectors and can be write as $p^{i}\cdot \|\Theta \|$, where
+   $\Theta^{T}X^{(i)}$ equals to dot product of the two vectors and can be write as $p^{i} \cdot \| \Theta \|$, where
    - $p^{i}$: projection of $X^{(i)}$ to $\Theta$
    - $\| \Theta \|$: vector length of $\Theta$. $B=\frac {1}{2} \cdot \| \Theta \|^{2}$
    So, the minimization of $J(\Theta)$ becomes minimization of $B$, which can be achieved via maximization of $\sum_{i=1}^{n}|p^{i}|$.
 2. With a Gaussian kernel
-
-  When the decision boundary is non-linear, we need to adopt a non-linear kernel like Gaussian kernel to measure similarity.
-  Then we can transfer original data $X$ into $F$ by following
-
-  1. Take all $n$ training examples as landmarks, feature scaling should be applied first if not;
-  2. For each example $x^{(i)}$, calculate similarites to each landmark $l^{(j)}$ as new features, it's $n$ features in total;
-     $$f^{(i)}_{j}=e^{-\frac{||x^{(i)}-l^{(j)}||^{2}}{2\sigma^{2}}}, j=1,2,3...n$$
-     $$f^{(i)}_{0}=1$$
-  3. Apply SVM with linear kernel to the new data.
+   When the decision boundary is non-linear, we need to adopt a non-linear kernel like Gaussian kernel to measure similarity.
+   Then we can transfer original data $X$ into $F$ by following
+   1. Take all $n$ training examples as landmarks, feature scaling should be applied first if not;
+   2. For each example $x^{(i)}$, calculate similarites to each landmark $l^{(j)}$ as new features, it's $n$ features in total;
+      $$f^{(i)}_{j}=e^{-\frac{||x^{(i)}-l^{(j)}||^{2}}{2\sigma^{2}}}, j=1,2,3...n$$
+      $$f^{(i)}_{0}=1$$
+   3. Apply SVM with linear kernel to the new data.
 
 ### 5.3 Some Basics
 
