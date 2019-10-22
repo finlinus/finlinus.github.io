@@ -228,6 +228,7 @@ It minimize cost function in following manner:
    Then we can transfer original data $X$ into $F$ by following
    1. Take all $n$ training examples as landmarks, feature scaling should be applied first if not;
    2. For each example $x^{(i)}$, calculate similarites to each landmark $l^{(j)}$ as new features, it's $n$ features in total;
+
       $$f^{(i)}_{j}=e^{-\frac{||x^{(i)}-l^{(j)}||^{2}}{2\sigma^{2}}}, j=1,2,3...n$$
       $$f^{(i)}_{0}=1$$
    3. Apply SVM with linear kernel to the new data.
