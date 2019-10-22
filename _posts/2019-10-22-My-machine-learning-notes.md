@@ -4,6 +4,7 @@ title: My machine learning notes
 subtitle: Key notes on Andrew Ng's machine learning course
 tags: [machinelearning]
 comments: false
+mathjax: true
 ---
 
 ## 1. Linear Regression
