@@ -73,7 +73,7 @@ where
 
 - $f_{\Theta}(X)$: regress function. $f_{\Theta}(X)=X\Theta$ if it's linear.
 
-Logistic Regression projects linear regression results with sigmoid function $g(z)=\frac{1}{1+e^{-z}}$ so that the outputs are nested within `[0, 1]`, which are suitable for classification problems.
+Logistic Regression projects linear regression results with sigmoid function $g(z)=\frac{1}{1+e^{-z}}$ so that the outputs are contineous and nested within `[0, 1]` with satifactory stiffness, which are suitable for two-class classification problems.
 
 ### 2.2 Cost Function
 
