@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-My name is finn and I make a living as a chemist but my interests include something more:
+My interest includes:
 
 - machine learning
 - computer science
